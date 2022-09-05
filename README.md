@@ -20,16 +20,17 @@ $ npm i payamsms-sdk
 
 ### Configuration
 
-Now you installed package. You need to initial it. Just require it and use `PayamSMS` class with 3 values.
+Now you installed package. You need to initial it. Just require it and use `PayamSMS` class with 4 params.
 
 - username
 - password
 - organization
+- line
 
 ```javascript
 const PayamSMS = require("payamsms-sdk");
 
-const sms = new PayamSMS("organization", "username", "password");
+const sms = new PayamSMS("organization", "username", "password", "line");
 ```
 
 ### Methods
