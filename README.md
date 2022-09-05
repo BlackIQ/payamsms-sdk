@@ -61,8 +61,8 @@ Then the return object is like below:
 
 ```json
 {
-    code: 200,
-    message: "Message sent"
+    "code": 200,
+    "message": "Message sent"
 }
 ```
 
@@ -70,8 +70,8 @@ Then the return object is like below:
 
 ```json
 {
-    code: 500,
-    message: "Errr details" // Error details will be describe here.
+    "code": 500,
+    "message": "Errr details" // Error details will be describe here.
 }
 ```
 
