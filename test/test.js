@@ -6,8 +6,8 @@ const sms = new PayamSMS("sbbiran", "sbbiran", "123654789", "98200040004");
 // Defailt message
 const messages = [
     {
-        recipient: "989363158232",
-        body: "",
+        recipient: "989014784362",
+        body: "test",
     },
 ];
 
@@ -21,8 +21,8 @@ send.then((result) => {
 });
 
 // Gettubg balaance
-const balance = sms.getBalance(messages);
+// const balance = sms.getBalance(messages);
 
-balance.then((result) => {
-    console.log(result);
-});
+// balance.then((result) => {
+//     console.log(result);
+// });
