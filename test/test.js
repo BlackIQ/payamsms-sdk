@@ -1,6 +1,6 @@
 const PayamSMS = require("payamsms-sdk");
 
-const sms = new PayamSMS("sbbiran", "sbbiran", "123654789");
+const sms = new PayamSMS("sbbiran", "sbbiran", "123654789", "98200040004");
 
 const messages = [
     {
