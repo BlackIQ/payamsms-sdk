@@ -35,9 +35,10 @@ const sms = new PayamSMS("organization", "username", "password", "line");
 
 ### Methods
 
-This SDK has 1 main methods.
+This SDK has 2 main methods for sending and receiving messages. One other is getting balance that 
 
 - `send`
+- `receive`
 
 #### Send
 
@@ -92,6 +93,30 @@ send.then((result) => {
         console.log(result.message);
     };
 });
+```
+
+### Receive
+
+> It will be completed soon . . .
+
+### balance
+
+With `balance` you can get how much money your account has. Ok, just follow instructions:
+
+```javascript
+const balance = sms.getBalance(messages);
+
+balance.then((result) => {
+    console.log(result);
+});
+```
+
+What `result` contains, is like below:
+
+```json
+{
+    "balance": "2020153"
+}
 ```
 
 ## Development
