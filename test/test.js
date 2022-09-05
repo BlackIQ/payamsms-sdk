@@ -4,13 +4,14 @@ const sms = new PayamSMS("sbbiran", "sbbiran", "123654789");
 
 const messages = [
     {
-        sender: "98200040004",
-        recipient: "989233410369",
+        recipient: "989363158232",
         body: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
-        customerId: 24,
     },
 ];
 
 const send = sms.send(messages);
 
-send.then((result) => console.log(result))
+send.then((result) => {
+    if (result.code === 200) console.log("Messages sent");
+    else console.log("Message can not be send");
+});
