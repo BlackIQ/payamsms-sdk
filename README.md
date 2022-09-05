@@ -52,10 +52,44 @@ const messages = [
 ];
 
 const send = sms.send(messages);
+```
 
+Then the return object is like below:
+
+- 200 | OK
+
+```json
+{
+    code: 200,
+    message: "Message sent"
+}
+```
+
+- 500 | Not OK
+
+```json
+{
+    code: 500,
+    message: "Errr details" // Error details will be describe here.
+}
+```
+
+So, handle it like this:
+
+```javascript
 send.then((result) => {
-    if (result.code === 200) console.log("Messages sent");
-    else console.log("Message can not be send");
+    if (result.code === 200) {
+        // Do what you want
+
+        // Show message
+        console.log(result.message);
+    };
+    else {
+        // Do what you want
+
+        // Show message
+        console.log(result.message);
+    };
 });
 ```
 
