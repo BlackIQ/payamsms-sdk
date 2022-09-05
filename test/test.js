@@ -12,6 +12,6 @@ const messages = [
 const send = sms.send(messages);
 
 send.then((result) => {
-    if (result.code === 200) console.log(result.message);
+    if (result.code === 200) console.log(result);
     else console.log(result.message);
 });
