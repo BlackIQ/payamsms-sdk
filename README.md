@@ -62,7 +62,7 @@ Then the return object is like below:
 ```json
 {
     "code": 200,
-    "message": "Message sent",
+    "message": "Message sent"
 }
 ```
 
@@ -71,7 +71,7 @@ Then the return object is like below:
 ```json
 {
     "code": 500,
-    "message": "Errr details", // Error details will be describe here.
+    "message": "Error details will be describe here."
 }
 ```
 
