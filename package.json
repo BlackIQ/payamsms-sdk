@@ -23,6 +23,7 @@
   },
   "homepage": "https://gitlab.com/BlackIQ/payamsms-sms#readme",
   "dependencies": {
-    "axios": "^0.27.2"
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.2"
   }
 }
