@@ -28,8 +28,10 @@ Now you installed package. You need to initial it. Just require it and use `Paya
 - line
 
 ```javascript
+// Import SDK
 const PayamSMS = require("payamsms-sdk");
 
+// Initial it
 const sms = new PayamSMS("organization", "username", "password", "line");
 ```
 
@@ -53,6 +55,7 @@ const messages = [
     },
 ];
 
+// Send message
 const send = sms.send(messages);
 ```
 
@@ -63,7 +66,16 @@ Then the return object is like below:
 ```json
 {
     "code": 200,
-    "message": "Message sent"
+    "message": "Message sent",
+    "messages": [
+        {
+            {
+                serverId: 10565602949,
+                customerId: 7759827466,
+                Mobile: "98912xxxxxxx"
+            }
+        }
+    ]
 }
 ```
 
@@ -107,7 +119,7 @@ With `balance` you can get how much money your account has. Ok, just follow inst
 const balance = sms.getBalance(messages);
 
 balance.then((result) => {
-    console.log(result);
+    console.log(result.balance);
 });
 ```
 
@@ -125,6 +137,7 @@ If you want to develop the package, it is so simple. just follow steps below.
 
 - Clone the project
 - Install dependencies by running `$ npm install`
+- Add your values in `.env` file
 - Start changing!
     - Link package
     - Test
@@ -146,6 +159,16 @@ Next, install what package uses with `npm i` or `npm install`.
 ```shell
 $ npm i
 ```
+
+### Add your values in `.env` file
+
+Go to `test` directory and make a copy of `.env` file.
+
+```shell
+$ cp .env.example .env
+```
+
+Now `.env` is created with keys and just add your values.
 
 ### Changing
 
