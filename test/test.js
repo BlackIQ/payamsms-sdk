@@ -1,13 +1,17 @@
+// Import PayamSMS
 const PayamSMS = require("payamsms-sdk");
 
-// Initial sms
-const sms = new PayamSMS("sbbiran", "sbbiran", "123654789", "98200040004");
+require("dotenv").config({ path: "./.env" });
+env = process.env;
 
-// Defailt message
+// Initial sms
+const sms = new PayamSMS(env.PAYAM_ORGANIZATION, env.PAYAM_USERNAME, env.PAYAM_PASSWORD, env.PAYAM_LINE);
+
+// Sample message
 const messages = [
     {
-        recipient: "989014784362",
-        body: "test",
+        recipient: "989363158232",
+        body: "Testing and testing.",
     },
 ];
 
@@ -15,14 +19,13 @@ const messages = [
 const send = sms.send(messages);
 
 send.then((result) => {
-    console.log(result);
-    // if (result.code === 200) console.log(result);
-    // else console.log(result.message);
+    if (result.code === 200) console.log(result.message);
+    else console.log(result.message);
 });
 
 // Gettubg balaance
-// const balance = sms.getBalance(messages);
+const balance = sms.getBalance(messages);
 
-// balance.then((result) => {
-//     console.log(result);
-// });
+balance.then((result) => {
+    console.log(result.balance);
+});
