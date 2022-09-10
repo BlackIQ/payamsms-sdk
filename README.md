@@ -31,8 +31,13 @@ Now you installed package. You need to initial it. Just require it and use `Paya
 // Import SDK
 const PayamSMS = require("payamsms-sdk");
 
-// Initial it
-const sms = new PayamSMS("organization", "username", "password", "line");
+// Initial it with your env
+const sms = new PayamSMS(
+    env.PAYAM_ORGANIZATION,
+    env.PAYAM_USERNAME,
+    env.PAYAM_PASSWORD,
+    env.PAYAM_LINE
+);
 ```
 
 ### Methods
@@ -59,53 +64,40 @@ const messages = [
 const send = sms.send(messages);
 ```
 
-Then the return object is like below:
+Now add then and get the results.
+
+```javascript
+send.then((result) => {
+    console.log(result);
+});
+```
+
+Then it returns an array contains objects like below:
 
 - 200 | OK
 
 ```json
-{
-    "code": 200,
-    "message": "Message sent",
-    "messages": [
-        {
-            {
-                serverId: 10565602949,
-                customerId: 7759827466,
-                Mobile: "98912xxxxxxx"
-            }
-        }
-    ]
-}
+[
+    {
+        "code": 200,
+        "message": "Message sent",
+        "serverId": 10565602949
+    }
+]
 ```
 
 - 500 | Not OK
 
 ```json
-{
-    "code": 500,
-    "message": "Error details will be describe here."
-}
+[
+    {
+        "code": 500,
+        "message": "Error details will be describe here."
+    }
+]
 ```
 
-So, handle it like this:
-
-```javascript
-send.then((result) => {
-    if (result.code === 200) {
-        // Do what you want
-
-        // Show message
-        console.log(result.message);
-    };
-    else {
-        // Do what you want
-
-        // Show message
-        console.log(result.message);
-    };
-});
-```
+So, you can do anything you want.
 
 ### Receive
 
