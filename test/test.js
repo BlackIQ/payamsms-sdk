@@ -16,19 +16,7 @@ const sms = new PayamSMS(
 const messages = [
     {
         recipient: "989102766731",
-        body: "Testing and testing.",
-    },
-    {
-        recipient: "989192186255",
-        body: "Testing and testing.",
-    },
-    {
-        recipient: "989014784362",
-        body: "Testing and testing.",
-    },
-    {
-        recipient: "989363158232",
-        body: "Testing and testing.",
+        body: "Sep 10. Working in PayamSMS-SDK.",
     },
 ];
 
@@ -37,9 +25,6 @@ const send = sms.send(messages);
 
 send.then((result) => {
     console.log(result);
-    
-    // if (result.code === 200) console.log(result.message);
-    // else console.log(result.message);
 });
 
 // Gettubg balaance
