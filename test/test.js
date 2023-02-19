@@ -1,35 +1,55 @@
-// Import PayamSMS
-const PayamSMS = require("payamsms-sdk");
+// ----------------------------------------------
+// test.js
+// ----------------------------------------------
+// Ok, here we can test the lib.
+// To test the librarry, in lib folder, enter $ npm link.
+// Som in test folder, enter $ npm link payamsms-sdk.
 
-require("dotenv").config({ path: "./.env" });
-env = process.env;
+// Imports
+import PayamSMS from "payamsms-sdk";
+import dotenv from "dotenv";
+
+// Env
+dotenv.config();
+const env = process.env;
 
 // Initial sms
 const sms = new PayamSMS(
-    env.PAYAM_ORGANIZATION,
-    env.PAYAM_USERNAME,
-    env.PAYAM_PASSWORD,
-    env.PAYAM_LINE
+  env.PAYAM_ORGANIZATION,
+  env.PAYAM_USERNAME,
+  env.PAYAM_PASSWORD,
+  env.PAYAM_LINE
 );
 
-// Sample message
-const messages = [
-    {
-        recipient: "989102766731",
-        body: "Sep 10. Working in PayamSMS-SDK.",
-    },
-];
+// Single message
+const message = {
+  recipient: "094784362",
+  body: "Single",
+};
 
-// Sending messages
-const send = sms.send(messages);
-
-send.then((result) => {
-    console.log(result);
+sms.single(message).then((result) => {
+  console.log(result);
 });
+
+// Multi messages
+// const messages = [
+//   {
+//     recipient: "090147362",
+//     body: "",
+//   },
+//   {
+//     recipient: "090147362",
+//     body: "Multi 2",
+//   },
+// ];
+
+// sms.multi(messages).then((result) => {
+//   console.log(result);
+// });
 
 // Gettubg balaance
-const balance = sms.getBalance(messages);
+// const balance = sms.getBalance();
 
-balance.then((result) => {
-    console.log(result);
-});
+// balance.then((result) => {
+//   console.log(result);
+// });

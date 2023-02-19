@@ -3,8 +3,9 @@
   "version": "1.2.4",
   "description": "PayamSMS SMS System Provider Development Kit",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "node index.js"
+    "test": "link-module-alias && node index.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,7 @@
   "bugs": {
     "url": "https://gitlab.com/BlackIQ/payamsms-sms/issues"
   },
-  "homepage": "https://gitlab.com/BlackIQ/payamsms-sms#readme",
+  "homepage": "https://gitlab.com/BlackIQ/payamsms-sms#readme",  
   "dependencies": {
     "axios": "^0.27.2",
     "dotenv": "^16.0.2"
