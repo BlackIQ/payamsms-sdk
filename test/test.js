@@ -23,8 +23,8 @@ const sms = new PayamSMS(
 
 // Single message
 const message = {
-  recipient: "094784362",
-  body: "Single",
+  recipient: "09014784362",
+  body: "Test valid phone",
 };
 
 sms.single(message).then((result) => {
@@ -32,24 +32,24 @@ sms.single(message).then((result) => {
 });
 
 // Multi messages
-// const messages = [
-//   {
-//     recipient: "090147362",
-//     body: "",
-//   },
-//   {
-//     recipient: "090147362",
-//     body: "Multi 2",
-//   },
-// ];
+const messages = [
+  {
+    recipient: "090147362",
+    body: "",
+  },
+  {
+    recipient: "090147362",
+    body: "Multi 2",
+  },
+];
 
-// sms.multi(messages).then((result) => {
-//   console.log(result);
-// });
+sms.multi(messages).then((result) => {
+  console.log(result);
+});
 
 // Gettubg balaance
-// const balance = sms.getBalance();
+const balance = sms.getBalance();
 
-// balance.then((result) => {
-//   console.log(result);
-// });
+balance.then((result) => {
+  console.log(result);
+});
