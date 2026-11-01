@@ -18,7 +18,7 @@ const sms = new PayamSMS(
   env.PAYAM_ORGANIZATION,
   env.PAYAM_USERNAME,
   env.PAYAM_PASSWORD,
-  env.PAYAM_LINE
+  env.PAYAM_LINE,
 );
 
 // Single message
