@@ -4,24 +4,28 @@
   "description": "PayamSMS SMS System Provider Development Kit",
   "main": "index.js",
   "type": "module",
+  "author": "Amirhossein Mohammadi",
+  "license": "MIT",
   "scripts": {
     "test": "link-module-alias && node index.js"
   },
+  "homepage": "https://gitlab.com/blackiq-packages/npm/payamsms-sdk",
   "repository": {
-    "type": "git",
-    "url": "git+https://gitlab.com/blackiq-packages/npm/payamsms-sdk.git"
+    "url": "git+https://gitlab.com/blackiq-packages/npm/payamsms-sdk.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/blackiq-packages/npm/payamsms-sdk/-/issues",
+    "email": "bugs@amirhossein.info"
+  },
+  "dependencies": {
+    "axios": "^1.21.0",
+    "dotenv": "^16.0.2"
   },
   "keywords": [
     "PayamSMS",
     "SMS",
     "Package",
     "SDK"
-  ],
-  "author": "Amirhossein Mohammadi",
-  "license": "MIT",
-  "homepage": "https://gitlab.com/blackiq-packages/npm/payamsms-sdk",
-  "dependencies": {
-    "axios": "^1.21.0",
-    "dotenv": "^16.0.2"
-  }
+  ]
 }
