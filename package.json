@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/BlackIQ/payamsms-sms.git"
+    "url": "git+https://gitlab.com/blackiq-packages/npm/payamsms-sdk.git"
   },
   "keywords": [
     "PayamSMS",
@@ -19,10 +19,7 @@
   ],
   "author": "Amirhossein Mohammadi",
   "license": "MIT",
-  "bugs": {
-    "url": "https://gitlab.com/BlackIQ/payamsms-sms/issues"
-  },
-  "homepage": "https://gitlab.com/BlackIQ/payamsms-sms#readme",  
+  "homepage": "https://gitlab.com/blackiq-packages/npm/payamsms-sdk",
   "dependencies": {
     "axios": "^0.27.2",
     "dotenv": "^16.0.2"
