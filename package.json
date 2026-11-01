@@ -21,7 +21,7 @@
   "license": "MIT",
   "homepage": "https://gitlab.com/blackiq-packages/npm/payamsms-sdk",
   "dependencies": {
-    "axios": "^0.27.2",
+    "axios": "^1.21.0",
     "dotenv": "^16.0.2"
   }
 }
