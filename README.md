@@ -1,4 +1,4 @@
-# PayamSMS Js Package
+# PayamSMS
 
 JavaScript SDK for the PayamSMS SMS API.
 

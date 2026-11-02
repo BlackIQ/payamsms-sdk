@@ -14,10 +14,10 @@ const balance = await sms.getBalance();
 console.log(balance);
 ```
 
-|            |                                                                              |
-| ---------- | ---------------------------------------------------------------------------- |
-| **npm**    | [npmjs.com/package/payamsms-sdk](https://www.npmjs.com/package/payamsms-sdk) |
-| **Source** | [GitLab](https://gitlab.com/blackiq-packages/npm/payamsms-sdk)               |
+|        |                                                                              |
+| ------ | ---------------------------------------------------------------------------- |
+| npm    | [npmjs.com/package/payamsms-sdk](https://www.npmjs.com/package/payamsms-sdk) |
+| Source | [GitLab](https://gitlab.com/blackiq-packages/npm/payamsms-sdk)               |
 
 ## Next
 
