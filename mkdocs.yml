@@ -1,0 +1,38 @@
+site_name: PayamSMS Docs
+site_description: Official PayamSMS Package documentation
+site_url: https://payamsms.amirhossein.info
+
+repo_url: https://gitlab.com/blackiq-packages/npm/payamsms-sdk
+repo_name: amirhossein/payamsms
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Dark mode
+    - scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - content.code.copy
+    - search.suggest
+
+nav:
+  - Home: index.md
+  - Learn:
+    - Install: learn/install.md
+    - Functions: learn/functions.md
+
+markdown_extensions:
+  - tables
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
