@@ -1,189 +1,34 @@
-# PayamSMS JavaScript SDK
+# PayamSMS Js Package
 
-**PayamSMS** is a SMS provider.
+JavaScript SDK for the PayamSMS SMS API.
 
-## How to use this package
-
-So, let's have a quick review of our steps.
-
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Methods](#methods)
-
-### Installation
-
-To install **PayamSMS SDK** use `npm` command like below:
-
-```shell
-$ npm i payamsms-sdk
+```bash
+npm install payamsms-sdk
 ```
-
-### Configuration
-
-Now you installed package. You need to initial it. Just require it and use `PayamSMS` class with 4 params.
-
-- username
-- password
-- organization
-- line
 
 ```javascript
-// Import SDK
-const PayamSMS = require("payamsms-sdk");
+import PayamSMS from "payamsms-sdk";
 
-// Initial it with your env
-const sms = new PayamSMS(
-    env.PAYAM_ORGANIZATION,
-    env.PAYAM_USERNAME,
-    env.PAYAM_PASSWORD,
-    env.PAYAM_LINE
-);
+const sms = new PayamSMS("organization", "username", "password", "3000xxxxxxx");
+
+console.log(await sms.getBalance());
+
+await sms.send([{ recipient: "0912xxxxxxx", body: "Hello" }]);
 ```
 
-### Methods
+**Methods:** `getBalance` · `send`
 
-This SDK has 2 main methods for sending and receiving messages. One other is getting balance that 
+## Docs
 
-- `send`
-- `receive`
+[payamsms.amirhossein.info](https://payamsms.amirhossein.info)
 
-#### Send
+## Links
 
-Now you want to send a message, or many messages. Ok, have fun with this method!
+|        |                                                      |
+| ------ | ---------------------------------------------------- |
+| npm    | https://www.npmjs.com/package/payamsms-sdk           |
+| Source | https://gitlab.com/blackiq-packages/npm/payamsms-sdk |
 
-```javascript
-// Descibe messages
-const messages = [
-    {
-        recipient: "98912xxxxxxx",
-        body: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
-    },
-];
+## License
 
-// Send message
-const send = sms.send(messages);
-```
-
-Now add then and get the results.
-
-```javascript
-send.then((result) => {
-    console.log(result);
-});
-```
-
-Then it returns an array contains objects like below:
-
-- 200 | OK
-
-```json
-[
-    {
-        "code": 200,
-        "message": "Message sent",
-        "serverId": 10565602949
-    }
-]
-```
-
-- 500 | Not OK
-
-```json
-[
-    {
-        "code": 500,
-        "message": "Error details will be describe here."
-    }
-]
-```
-
-So, you can do anything you want.
-
-### Receive
-
-> It will be completed soon . . .
-
-### balance
-
-With `balance` you can get how much money your account has. Ok, just follow instructions:
-
-```javascript
-const balance = sms.getBalance(messages);
-
-balance.then((result) => {
-    console.log(result.balance);
-});
-```
-
-What `result` contains, is like below:
-
-```json
-{
-    "balance": "2020153"
-}
-```
-
-## Development
-
-If you want to develop the package, it is so simple. just follow steps below.
-
-- Clone the project
-- Install dependencies by running `$ npm install`
-- Add your values in `.env` file
-- Start changing!
-    - Link package
-    - Test
-
-> Before you start: **Remember the base or code are stored in `lib/payamsms.js`. You need to edit there.
-
-### Cloning the project
-
-To clone the project, you need to have git installed. Ok, now clone it same as command below.
-
-```shell
-$ git clone https://gitlab.com/BlackIQ/payamsms-sdk
-```
-
-### installing dependencies
-
-Next, install what package uses with `npm i` or `npm install`.
-
-```shell
-$ npm i
-```
-
-### Add your values in `.env` file
-
-Go to `test` directory and make a copy of `.env` file.
-
-```shell
-$ cp .env.example .env
-```
-
-Now `.env` is created with keys and just add your values.
-
-### Changing
-
-To change package or anything, your need a testing environment to use linked package. Just follow steps.
-
-#### Link package
-
-We asoume you are in `lib` directory. Right. You can open a **tmux** or in another terminal to cd in `test` directory.
-
-In `lib` directory enter link command:
-
-```shell
-$ npm link
-```
-
-So, in other terminal, or other tmux part, link your development package to your `test` directory. If you are in the `test` directory ok, if not, just say `cd test` and enter the linking command:
-
-```shell
-$ npm link payamsms-sdk
-```
-
-Linking step is done.
-
-#### Test
-
-Your test app is linked. Change anything in package and test it in `test` directory.
+MIT
