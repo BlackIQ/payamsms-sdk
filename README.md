@@ -20,7 +20,7 @@ await sms.send([{ recipient: "0912xxxxxxx", body: "Hello" }]);
 
 ## Docs
 
-[payamsms.amirhossein.info](https://payamsms.amirhossein.info)
+[payamsms.docs.amirhossein.info](https://payamsms.docs.amirhossein.info)
 
 ## Links
 
