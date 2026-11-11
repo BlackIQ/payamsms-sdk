@@ -1,5 +1,5 @@
 [project]
-name = "payamsms-sdk"
+name = "payamsms-docs"
 version = "0.1.0"
 description = "JavaScript SDK for the PayamSMS SMS provider"
 readme = "README.md"

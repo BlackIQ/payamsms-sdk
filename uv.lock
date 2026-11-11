@@ -413,7 +413,7 @@ wheels = [
 ]
 
 [[package]]
-name = "payamsms-sdk"
+name = "payamsms-docs"
 version = "0.1.0"
 source = { virtual = "." }
 
