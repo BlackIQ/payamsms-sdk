@@ -20,15 +20,15 @@ await sms.send([{ recipient: "0912xxxxxxx", body: "Hello" }]);
 
 ## Docs
 
-Full documentation: [payamsms.docs.amirhossein.info](https://payamsms.docs.amirhossein.info)
+Full documentation: [payamsms.amirhossein.info](https://payamsms.amirhossein.info)
 
 ## Links
 
-| Title  | URL                                                  |
-| ------ | ---------------------------------------------------- |
-| npm    | https://www.npmjs.com/package/payamsms-sdk           |
-| Source | https://gitlab.com/blackiq-packages/npm/payamsms-sdk |
-| Docs   | https://payamsms.docs.amirhossein.info               |
+| Title  | URL                                        |
+| ------ | ------------------------------------------ |
+| npm    | https://www.npmjs.com/package/payamsms-sdk |
+| Source | https://github.com/BlackIQ/payamsms-sdk    |
+| Docs   | https://payamsms.amirhossein.info          |
 
 ## License
 
