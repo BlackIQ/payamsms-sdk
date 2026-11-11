@@ -9,13 +9,13 @@
   "scripts": {
     "test": "link-module-alias && node index.js"
   },
-  "homepage": "https://gitlab.com/blackiq-packages/npm/payamsms-sdk",
+  "homepage": "https://github.com/BlackIQ/payamsms-sdk",
   "repository": {
-    "url": "git+https://gitlab.com/blackiq-packages/npm/payamsms-sdk.git",
+    "url": "git+https://github.com/BlackIQ/payamsms-sdk.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://gitlab.com/blackiq-packages/npm/payamsms-sdk/-/issues",
+    "url": "https://github.com/BlackIQ/payamsms-sdk/issues",
     "email": "bugs@amirhossein.info"
   },
   "dependencies": {

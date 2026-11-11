@@ -17,7 +17,7 @@ console.log(balance);
 |        |                                                                              |
 | ------ | ---------------------------------------------------------------------------- |
 | npm    | [npmjs.com/package/payamsms-sdk](https://www.npmjs.com/package/payamsms-sdk) |
-| Source | [GitLab](https://gitlab.com/blackiq-packages/npm/payamsms-sdk)               |
+| Source | [GitHub](https://github.com/BlackIQ/payamsms-sdk)                            |
 
 ## Next
 
