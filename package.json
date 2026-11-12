@@ -1,6 +1,6 @@
 {
   "name": "payamsms-sdk",
-  "version": "2.5.10",
+  "version": "2.5.11",
   "description": "PayamSMS SMS System Provider Development Kit",
   "main": "index.js",
   "type": "module",
