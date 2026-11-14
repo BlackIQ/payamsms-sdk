@@ -1,11 +1,11 @@
 # Install
 
+Install **PayamSMS SDK** using NPM.
+
 ```bash
 npm install payamsms-sdk
 ```
 
-```javascript
-import PayamSMS from "payamsms-sdk";
-```
+Dependencies:
 
-Dependency: `axios` (installed automatically).
+- `axios` (installed automatically)
