@@ -13,11 +13,13 @@ const sms = new PayamSMS(
 );
 ```
 
-Requests go to  
-`https://new.payamsms.com/services/rest/index.php`  
-with `organization`, `username`, and `password` on each call.
+Requests go to `https://new.payamsms.com/services/rest/index.php` with `organization`, `username`, and `password` on each call.
 
-## Balance
+## Functions and how to use the SDK
+
+### Balance
+
+Shows your the current account balance.
 
 ```javascript
 const result = await sms.getBalance();
@@ -25,7 +27,9 @@ const result = await sms.getBalance();
 console.log(result.balance);
 ```
 
-## Send
+### Send
+
+Send messages!
 
 Pass an **array of objects** (`recipient` + `body`). The SDK attaches your sender line automatically.
 
