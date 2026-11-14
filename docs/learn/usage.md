@@ -15,7 +15,9 @@ const sms = new PayamSMS(
 
 Requests go to `https://new.payamsms.com/services/rest/index.php` with `organization`, `username`, and `password` on each call.
 
-## Functions and how to use the SDK
+## API References
+
+Here are all you need about functions, errors and how to use them.
 
 ### Balance
 
